@@ -2,7 +2,7 @@
   "name": "project-event-booster",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://yehorBr.github.io/parcel-project-template",
+  "homepage": "https://YehorBr.github.io/project-event-booster",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /project-event-booster/"
