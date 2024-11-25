@@ -7,7 +7,10 @@ const li = document.querySelector('li')
 li.addEventListener('click', onListItemClick)
 
 function createModalMarkup(accident){
-    return `<h3 class="title-info">INFO</h3>
+    return `<div class="content-container"><img src="${accident.images[7].url}" alt="">
+    <img src="${accident.images[9].url}" alt="">
+    <div class="info-container">  
+    <h3 class="title-info">INFO</h3>
     <p >${accident.promoter.description}</p>         
     <h3 class="title-when">WHEN</h3>         
     <p>${accident.dates.start.localDate}</p>         
@@ -19,9 +22,10 @@ function createModalMarkup(accident){
     <p>${accident.name}</p>         
     <h3 class="title-price">PRICES</h3>         
     <p>${accident.priceRanges[0].type} ${accident.priceRanges[0].min}-${accident.priceRanges[0].max} ${accident.priceRanges[0].currency}</p>         
-    <button type="button">BUY TICKETS</button>           
-    <img src="${accident.images[9].url}" alt="">         
-    <img src="${accident.images[7].url}" alt="">` }
+    <button type="button">BUY TICKETS</button>
+    </div></div>            
+           
+    ` }
 
 function onListItemClick(){
     getDetailsOfEvent()
