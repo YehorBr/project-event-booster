@@ -78,4 +78,29 @@ input {
   .container {
     width: 1200px;
   }
+}
+
+body {
+  background-color: black;
+}
+
+.header {
+  display: flex;
+}
+.header_top {
+  width: 100%;
+  height: 50px;
+  background: black;
+  padding: 15px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header_top_logo {
+  color: white;
+}
+.header_top_title {
+  text-transform: capitalize;
+}
+.header_top_right {
+  color: white;
 }/*# sourceMappingURL=index.css.map */
