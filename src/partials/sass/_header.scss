@@ -5,16 +5,18 @@
     background-image: url(./images/header/first-background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     &_top{
         display: flex;
         justify-content: space-between;
         &_logo{
             width: 20%;
+            height: 5%;
         }
         &_title{
             margin: 40px 0 0 0;
             color: black;
-            width: 45%;
+            width: 50%;
             text-align: center;
             font-family: Montserrat;
             font-size: 50px;
@@ -39,6 +41,14 @@
                 background-color: gray;
                 border: none;
                 border-radius: 50px;
+                position: relative;
+            }
+            &_svg{
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                left: 550px;
+                top: 218px;
             }
         }
         &_second{
@@ -46,9 +56,19 @@
                 margin: 0 0 30px 15px;
                 width: 270px;
                 height: 40px;
+                color: white;
                 background-color: gray;
                 border: none;
-           }
+                border-radius: 50px;
+                position: relative;
+            }
+            &_svg{
+                width: 15px;
+                height: 10px;
+                position: absolute;
+                left: 855px;
+                top: 220px;
+            }
         }
     }
 }
