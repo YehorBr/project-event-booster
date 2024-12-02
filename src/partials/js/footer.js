@@ -46,16 +46,17 @@ import Pagination from 'tui-pagination';
 
   // Using custom events!!!
 
-  var pagination = new tuiPagination('pagination', {
+  const pagination = new Pagination('pagination', {
     totalItems: 500
 });
 
-pagination.on('beforeMove', function(eventData) {
-    console.log("before move")
-});
+// pagination.on('beforeMove', function(eventData) {
+//     console.log("before move")
+// });
 
 pagination.on('afterMove', function(eventData) {
-    console.log("after move")
+  console.log("after move")
+  
 });
 
 
