@@ -1,0 +1,100 @@
+.backdrop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+.modal{
+    display: none;
+
+    position: absolute;
+
+    width: 930px;
+    height: 1023px;
+
+    background-color: $modalBackground;
+    border-radius: 300px 0px;
+
+    padding: 30px 62px;
+
+    pointer-events: auto;
+}
+
+.modal.is-show{
+    display: block;
+}
+
+.content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 43px;
+}
+
+.small-img{
+    width: 132px;
+    height: 132px;
+    border-radius: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.big-img{
+   width: 360px;
+   height: 641px;
+
+}
+
+.info-container{
+ margin-left: 60px;
+}
+
+
+.modal h3{
+    color: $titleColor;
+    margin-top: 20px;
+}
+
+.modal p{
+    
+    color: #0E0E0E;
+    margin-top: 7px;
+}
+
+.modal button{
+    display: inline-block;
+    &:not(.close-modal-btn){    
+        color: $textColor;
+        background-color: #4C00FE;
+    }
+
+
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 5px;
+}
+
+.close-modal-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    background-color: transparent;
+
+    z-index: 999;
+}
+
+
+
+
