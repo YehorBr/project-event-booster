@@ -1,3 +1,4 @@
+import './partials/js/api-server'
 import './partials/js/header'
 import './partials/js/main'
 import './partials/js/footer'
