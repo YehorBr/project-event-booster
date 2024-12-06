@@ -26,7 +26,7 @@ function createMarkup(events) {
   const markup = events
     .map(
       event => `
-      <li class="card">
+      <li class="card" id="${event.id}">
         <img class="card-img" src="${event.images[0].url}" alt="${event.name}">
         <h2 class="card-header">${event.name}</h2>
         <p class="card-date-text">${event.dates.start.localDate}</p>
