@@ -2,13 +2,21 @@ import {getDetailsOfEvent} from './api-server'
 
 const modalBackdrop = document.querySelector('.backdrop')
 const modal = document.querySelector('.modal')
-const li = document.querySelector('li')
+const modalContentContainer = document.querySelector('.modal-content')
+const closeModalBtn = document.querySelector('.close-modal-btn')
+const articlesContainerRef = document.querySelector('.js-articles-container');
+const card = document.querySelector('.card')
 
-li.addEventListener('click', onListItemClick)
+articlesContainerRef.addEventListener('click', onArticlesClick)
+closeModalBtn.addEventListener('click', onCloseModal)
+modalBackdrop.addEventListener('click', onBackdropClick)
+document.addEventListener('keydown', onEscapeModal)
+
 
 function createModalMarkup(accident){
-    return `<div class="content-container"><img src="${accident.images[7].url}" alt="">
-    <img src="${accident.images[9].url}" alt="">
+    return `<img class="small-img" src="${accident.images[7].url}" alt="">
+    <div class="content-container">
+    <img class="big-img" src="${accident.images[4].url}" alt="">
     <div class="info-container">  
     <h3 class="title-info">INFO</h3>
     <p >${accident.promoter.description}</p>         
@@ -27,14 +35,48 @@ function createModalMarkup(accident){
            
     ` }
 
-function onListItemClick(){
-    getDetailsOfEvent()
+function onArticlesClick(e){
+    if(e.target.parentNode.nodeName !== 'LI'){
+        return
+    }
+
+    modalBackdrop.style.pointerEvents = 'auto';
+    
+    articleId = e.target.parentNode.id
+
+    modal.classList.add('is-show')
+    getDetailsOfEvent(articleId)
     .then(accident =>{
         const modalMarkUp = createModalMarkup(accident)
-        modal.innerHTML = modalMarkUp
+        modalContentContainer.innerHTML = modalMarkUp
     })
+
+
     
 }
+
+function onCloseModal(){
+    modal.classList.remove('is-show')
+}
+
+function onBackdropClick(e){
+    if(e.target !== modalBackdrop){
+        return
+    }
+
+    modal.classList.remove('is-show')
+    modalBackdrop.style.pointerEvents = 'none';
+}
+
+
+function onEscapeModal(e){
+    if(e.key === 'Escape'){
+        modal.classList.remove('is-show')
+    }
+
+
+}
+
 
 
 
