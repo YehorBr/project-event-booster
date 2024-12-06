@@ -19,8 +19,6 @@
   },
   "dependencies": {
     "modern-normalize": "^1.1.0",
-    "pagination": "^0.4.6",
-    "tui": "^1.0.0",
     "tui-pagination": "^3.4.1"
   },
   "devDependencies": {
