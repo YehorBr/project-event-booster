@@ -3,13 +3,15 @@
 }
 .header_input_second_search::placeholder{
     color: #939393;
-    apa
 }
 .header{
     background-image: url(./images/header/first-background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 0 0 0 0;
+    border: none;
+    margin: 0 0 0 0;
     &_top{
         display: flex;
         justify-content: space-between;
@@ -40,38 +42,40 @@
         &_first{
             &_search{
                 margin: 0 15px 30px 0px;
-                width: 270px;
+                width: 240px;
                 height: 40px;
-                background-color: gray;
+                background-color: rgba(128, 128, 128, 0.7);
                 border: none;
                 border-radius: 50px;
                 position: relative;
+                padding: 0px 0px 0px 30px;
             }
             &_svg{
                 width: 15px;
                 height: 15px;
                 position: absolute;
                 left: 550px;
-                top: 218px;
+                top: 213px;
             }
         }
         &_second{
             &_search{
                 margin: 0 0 30px 15px;
-                width: 270px;
+                width: 240px;
                 height: 40px;
                 color: white;
-                background-color: gray;
+                background-color: rgba(128, 128, 128, 0.7);                
                 border: none;
                 border-radius: 50px;
                 position: relative;
+                padding: 0px 0px 0px 30px;
             }
             &_svg{
                 width: 15px;
                 height: 10px;
                 position: absolute;
                 left: 855px;
-                top: 220px;
+                top: 215px;
             }
         }
     }
