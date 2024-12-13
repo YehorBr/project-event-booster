@@ -80,41 +80,41 @@
 
 // 2V
 
-// import Pagination from 'tui-pagination';
-// import { TicketmasterApi } from './api-server';
+import Pagination from 'tui-pagination';
+import { TicketmasterApi } from './api-server';
 
-// const articlesContainerRef = document.querySelector('.js-articles-container');
-// const ticketmasterApi = new TicketmasterApi();
+const articlesContainerRef = document.querySelector('.js-articles-container');
+const ticketmasterApi = new TicketmasterApi();
 
-// const options = {
-//   totalItems: 500,
-//   itemsPerPage: 20,
-//   visiblePages: 5,
-//   page: 1,
-// };
+const options = {
+  totalItems: 500,
+  itemsPerPage: 20,
+  visiblePages: 5,
+  page: 1,
+};
 
-// const pagination = new Pagination('pagination', options);
+const pagination = new Pagination('pagination', options);
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   fetchAndRenderEvents(1);
-// });
+document.addEventListener('DOMContentLoaded', () => {
+  fetchAndRenderEvents(1);
+});
 
-// pagination.on('afterMove', function (eventData) {
-//   const currentPage = eventData.page;
-//   fetchAndRenderEvents(currentPage);
-// });
+pagination.on('afterMove', function (eventData) {
+  const currentPage = eventData.page;
+  fetchAndRenderEvents(currentPage);
+});
 
-// async function fetchAndRenderEvents(page) {
-//   try {
-//     const events = await ticketmasterApi.fetchEvents(page, options.itemsPerPage);
+async function fetchAndRenderEvents(page) {
+  try {
+    const events = await ticketmasterApi.fetchEvents(page, options.itemsPerPage);
 
-//     articlesContainerRef.innerHTML = '';
+    articlesContainerRef.innerHTML = '';
 
-//     renderEvents(events);
-//   } catch (error) {
-//     console.error('error', error);
-//   }
-// }
+    renderEvents(events);
+  } catch (error) {
+    console.error('error', error);
+  }
+}   
 
 // 2V
 
