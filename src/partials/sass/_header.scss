@@ -145,14 +145,15 @@
             }
             &_title{
                 margin: 0 0 0 0;
-                color: black;
-                width: 50%;
+                width: 80%;
                 text-align: center;
                 font-family: Montserrat;
-                font-size: 50px;
+                font-size: 18px;
                 font-weight: 900;
-                line-height: 60.95px;
+                line-height: 21.94px;
                 color: #DC56C5;
+                align-items: center;
+                margin: 0 0 0 32px;
             }
             &_emptiness{
                 color: black;
@@ -162,11 +163,11 @@
             }
         }
         &_input{
-            display: none;
-            justify-content: center;
+            display: block;
+            align-content: center;
             &_first{
                 &_search{
-                    margin: 0 15px 30px 0px;
+                    margin: 25px 0 25px 20px;
                     width: 240px;
                     height: 40px;
                     background-color: rgba(128, 128, 128, 0.7);
@@ -179,13 +180,13 @@
                     width: 15px;
                     height: 15px;
                     position: absolute;
-                    left: 550px;
-                    top: 213px;
+                    left: 260px;
+                    top: 175px;
                 }
             }
             &_second{
                 &_search{
-                    margin: 0 0 30px 15px;
+                    margin: 0 0 52px 20px;
                     width: 240px;
                     height: 40px;
                     color: white;
@@ -199,8 +200,8 @@
                     width: 15px;
                     height: 10px;
                     position: absolute;
-                    left: 855px;
-                    top: 215px;
+                    left: 260px;
+                    top: 243px;
                 }
             }
         }
