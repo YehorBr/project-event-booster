@@ -22,7 +22,7 @@ async function fetchAndRenderEvents() {
   }
 }
 
-function createMarkup(events) {
+export function createMarkup(events) {
   const markup = events
     .map(
       event => `
