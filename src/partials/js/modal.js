@@ -45,7 +45,7 @@ function onArticlesClick(e){
     modalContentContainer.innerHTML = '';
     loader.style.display = 'block';
     
-    articleId = e.target.parentNode.id;
+    let articleId = e.target.parentNode.id;
 
     modal.classList.add('is-show');
 
