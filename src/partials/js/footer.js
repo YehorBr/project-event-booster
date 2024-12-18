@@ -1,40 +1,39 @@
+import Pagination from 'tui-pagination';
+import { TicketmasterApi } from './api-server';
+import { createMarkup } from './main.js';
+
+const articlesContainerRef = document.querySelector('.js-articles-container');
+const ticketmasterApi = new TicketmasterApi();
+
 const options = {
-    totalItems: 10,
-    itemsPerPage: 10,
-    visiblePages: 10,
-    page: 1,
-    centerAlign: false,
-    firstItemClassName: 'tui-first-child',
-    lastItemClassName: 'tui-last-child',
-    template: {
-      page: '<a href="#" class="tui-page-btn">{{page}}</a>',
-      currentPage: '<strong class="tui-page-btn tui-is-selected">{{page}}</strong>',
-      moveButton:
-        '<a href="#" class="tui-page-btn tui-{{type}}">' +
-          '<span class="tui-ico-{{type}}">{{type}}</span>' +
-        '</a>',
-      disabledMoveButton:
-        '<span class="tui-page-btn tui-is-disabled tui-{{type}}">' +
-          '<span class="tui-ico-{{type}}">{{type}}</span>' +
-        '</span>',
-      moreButton:
-        '<a href="#" class="tui-page-btn tui-{{type}}-is-ellip">' +
-          '<span class="tui-ico-ellip">...</span>' +
-        '</a>'
-    }
-  };
-  
-  const pagination = new Pagination('pagination', options);
+  totalItems: 500,
+  itemsPerPage: 20,
+  visiblePages: 5,
+  page: 1,
+};
 
-moveButton: type => {
-    let template = '';
+const pagination = new Pagination('pagination', options);
 
-    if (type === 'first') {
-      template =
-        '<div class="custom-page-btn">' +
-          '<span class="custom-ico"></span>' +
-        '</div>';
-    }
-
-    return template;
+async function fetchAndRenderEvents(page) {
+  try {
+    const events = await ticketmasterApi.fetchEvents(page, options.itemsPerPage);
+    return events
+  } catch (error) {
+    console.error('error', error);
+  }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetchAndRenderEvents(1);
+});
+
+pagination.on('afterMove', function (eventData) {
+  const currentPage = eventData.page;
+  fetchAndRenderEvents(currentPage)
+  .then((events)=>{
+    articlesContainerRef.innerHTML = '';
+    createMarkup(events);
+  })
+});
+
+

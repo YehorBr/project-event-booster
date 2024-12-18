@@ -7,8 +7,8 @@ export function getDetailsOfEvent(id){
 }
 
 export class TicketmasterApi {
-  fetchEvents() {
-    const url = `https://${BASE_URL}/discovery/v2/events.json?apikey=${API_KEY}`;
+  fetchEvents(page = 1, size = 20) {
+    const url = `https://${BASE_URL}/discovery/v2/events.json?apikey=${API_KEY}&page=${page}&size=${size}`;
     return fetch(url)
       .then(response => {
         if (!response.ok) {

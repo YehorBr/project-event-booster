@@ -4,7 +4,6 @@
  * @author NHN FE Development Team <dl_javascript@nhn.com>
  * @license MIT
  */
- 
  @charset 'utf-8';
  .tui-pagination * {
      -moz-user-select: none;
@@ -51,23 +50,22 @@
      line-height: 1;
      text-decoration: none;
      vertical-align: middle;
-     border: 1px solid #ddd;
      border-width: 1px 0;
  }
  
  .tui-pagination .tui-page-btn:hover {
-     background-color: #f4f4f4;
+     background-color: #010000;
  }
  
  .tui-pagination .tui-is-selected, .tui-pagination strong {
-     color: #fff;
-     background: #4b96e6;
-     border-color: #4b96e6;
+     color: #ffffff;
+     background: #000000;
+     border-color: #000000;
      cursor: default;
  }
  
  .tui-pagination .tui-is-selected:hover {
-     background-color: #4b96e6;
+     background-color: #000000;
  }
  
  .tui-pagination .tui-first-child.tui-is-selected, .tui-pagination strong.tui-first-child {
@@ -75,19 +73,17 @@
  }
  
  .tui-pagination .tui-first-child, .tui-pagination .tui-prev-is-ellip {
-     border-left: 1px solid #ddd
+     border-left: 1px solid #000000
  }
  
  .tui-pagination .tui-last-child, .tui-pagination .tui-next-is-ellip {
-     border-right: 1px solid #ddd
+     border-right: 1px solid #000000
  }
  
- .tui-pagination .tui-first-child.tui-is-selected {
-     border-left: 1px solid #4b96e6
- }
+
  
  .tui-pagination .tui-last-child.tui-is-selected {
-     border-right: 1px solid #4b96e6
+     border-right: 1px solid #DC56C5
  }
  
  .tui-pagination .tui-first, .tui-pagination .tui-prev, .tui-pagination .tui-next, .tui-pagination .tui-last, .tui-pagination .tui-prev-is-ellip, .tui-pagination .tui-next-is-ellip {
@@ -98,7 +94,7 @@
      line-height: 26px;
      white-space: nowrap;
      font-weight: normal;
-     border: 1px solid #ddd;
+     border: 1px solid #000000;
  }
  
  .tui-pagination .tui-prev-is-ellip {
@@ -166,7 +162,7 @@
  }
  
  .tui-pagination .tui-is-disabled:hover {
-     background: #fff;
+     background: #000000;
      cursor: default
  }
  
@@ -198,13 +194,13 @@
      padding: 8px 0 6px;
      font-size: 12px;
      text-align: center;
-     color: #333;
+     color: #ffffff;
      border: 0;
      outline: none;
  }
  
  .tui-page-inputs .tui-page-current {
-     color: #4b96e6
+     color: #DC56C5
  }
  
  .tui-page-separator {
@@ -214,7 +210,9 @@
      padding: 8px 0 6px;
      vertical-align: top
  }
- 
+
+@import 'variables';
+
  #c {
     margin-top: 80px;
      color: #939393;
@@ -224,18 +222,75 @@
     background-color: #000000;
     padding-top: 80px;
     padding-bottom: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    #footer-d {
+        text-align: center;
+        width: 100%;
+      }
+      
+      #pagination {
+        margin-bottom: 20px;
+      }
+      
+      #c {
+        margin-top: 20px;
+      }
+
+    @media (max-width: $mobile) {
+        width: 320px;
+        padding-top: 80px;
+        padding-bottom: 19px;
+        width: 320px
+      }
+    
+      @media (min-width: $tablet) and (max-width: $desktop) {
+        width: 768px;
+        padding-top: 80px;
+        padding-bottom: 19px;
+        width: 768px
+      }
+    
+      @media (min-width: $desktop) {
+        width: 1280px;
+        padding-top: 80px;
+        padding-bottom: 19px;
+        width: 1200px
+      }
+      @media (min-width: $desktop) {
+        width: 100%;
+      }
  }
 
- #pagination > button:not(:first-child) {
-    margin-left: 30px;
+ #footer-d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
  }
 
- .button {
+
+ .tui-page-btn,
+ .tui-first,
+ .tui-last,
+ .tui-prev,
+ .tui-next {
     color: #FFFFFF;
     background-color: #000000;
     border: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 5px;
+    padding-top: 5px;
  }
 
- .button:hover {
+ .tui-page-btn:hover
+ {
     border: solid 1px #DC56C5;
+    border-radius: 10px 0 10px 0;
+    color: #DC56C5;
  }
