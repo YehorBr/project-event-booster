@@ -6,6 +6,7 @@ const modalContentContainer = document.querySelector('.modal-content')
 const closeModalBtn = document.querySelector('.close-modal-btn')
 const articlesContainerRef = document.querySelector('.js-articles-container');
 const card = document.querySelector('.card')
+const loader = document.querySelector('.loader');
 
 articlesContainerRef.addEventListener('click', onArticlesClick)
 closeModalBtn.addEventListener('click', onCloseModal)
@@ -41,40 +42,53 @@ function onArticlesClick(e){
     }
 
     modalBackdrop.style.pointerEvents = 'auto';
+    modalContentContainer.innerHTML = '';
+    loader.style.display = 'block';
     
-    articleId = e.target.parentNode.id
+    articleId = e.target.parentNode.id;
 
-    modal.classList.add('is-show')
+    modal.classList.add('is-show');
+
     getDetailsOfEvent(articleId)
     .then(accident =>{
         const modalMarkUp = createModalMarkup(accident)
-        modalContentContainer.innerHTML = modalMarkUp
+        modalContentContainer.innerHTML = modalMarkUp;
     })
-
+    .catch(err=> {console.log(err)
+    modalContentContainer.innerHTML = '<h1>Не вдалося завантажити дані</h1>';
+    })
+    .finally(() => {
+        loader.style.display = 'none';
+    });
 
     
 }
 
 function onCloseModal(){
-    modal.classList.remove('is-show')
-}
-
-function onBackdropClick(e){
-    if(e.target !== modalBackdrop){
-        return
-    }
-
-    modal.classList.remove('is-show')
-    modalBackdrop.style.pointerEvents = 'none';
-}
-
-
-function onEscapeModal(e){
-    if(e.key === 'Escape'){
+    if(modal){
         modal.classList.remove('is-show')
     }
 
+}
 
+function onBackdropClick(e){
+    if(e.target === modalBackdrop){
+        modal.classList.remove('is-show')
+        modalBackdrop.style.pointerEvents = 'none';
+    }
+    else{
+        return
+    }   
+}
+
+
+    function onEscapeModal(e){
+    if(e.key === 'Escape'){
+        modal.classList.remove('is-show')
+    }
+    else{
+        return
+    }
 }
 
 
