@@ -38,4 +38,3 @@ export function createMarkup(events) {
 
   articlesContainerRef.insertAdjacentHTML('beforeend', markup);
 }
-
