@@ -1,5 +1,6 @@
 import { searchByCountry } from "./api-server";
 import { searchByKeyword } from "./api-server";
+import { createMarkup } from "./main";
 
 const select = document.getElementById('country_select')
 
@@ -8,6 +9,6 @@ select.addEventListener('change', (event) =>{
     searchByCountry(event.target.value)
     .then(events => {
         const eventsByCountry = events._embedded.events
-        // викликати функціїю яка рендерить події і передати їй eventsByCountry
+        createMarkup(eventsByCountry);
     })
 })
