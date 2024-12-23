@@ -19,3 +19,16 @@ export class TicketmasterApi {
       .then(data => (data._embedded ? data._embedded.events : [])); 
   }
 }
+
+export function searchByCountry(country) {
+    console.log(country);
+    return fetch(`https://${BASE_URL}/discovery/v2/events?locale=${country}&apikey=${API_KEY}`)
+    .then(r=>r.json())
+}
+
+export function searchByKeyword(keyword) {
+    console.log(keyword);
+    return fetch(`https://${BASE_URL}/discovery/v2/events?locale=${keyword}&apikey=${API_KEY}`)
+    .then(r=>r.json())
+}
+
