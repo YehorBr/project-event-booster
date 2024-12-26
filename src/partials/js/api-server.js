@@ -31,4 +31,3 @@ export function searchByKeyword(keyword) {
     return fetch(`https://${BASE_URL}/discovery/v2/events?locale=${keyword}&apikey=${API_KEY}`)
     .then(r=>r.json())
 }
-
