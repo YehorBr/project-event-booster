@@ -40,6 +40,7 @@
         display: flex;
         justify-content: center;
         &_first{
+            display: block;
             &_search{
                 margin: 0 15px 30px 0px;
                 width: 240px;
@@ -49,7 +50,7 @@
                 border: none;
                 border-radius: 50px;
                 position: relative;
-                padding: 0px 0px 0px 30px;
+                padding: 0px 0px 0px 0px;
             }
             &_svg{
                 width: 15px;
@@ -70,12 +71,13 @@
                 border-radius: 50px;
                 position: relative;
                 padding: 0px 0px 0px 30px;
+                appearance: none;
             }
             &_svg{
                 width: 15px;
                 height: 10px;
                 position: absolute;
-                left: 855px;
+                left: 827px;
                 top: 217px;
             }
         }
@@ -106,19 +108,20 @@
         &_input{
             &_first{
                 &_svg{
-                    width: 15px;
-                    height: 15px;
+                    width: 10px;
+                    height: 10px;
                     position: absolute;
-                    left: 338px;
-                    top: 142px;
+                    left: 353px;
+                    top: 145px;
                 }
             }
             &_second{
                 &_svg{
+                    display: none;
                     width: 15px;
                     height: 10px;
                     position: absolute;
-                    left: 638px;
+                    left: 615px;
                     top: 145px;
                 }
             }
@@ -178,11 +181,11 @@
                     padding: 0px 0px 0px 30px;
                 }
                 &_svg{
-                    width: 15px;
-                    height: 15px;
+                    width: 13px;
+                    height: 13px;
                     position: absolute;
-                    left: 260px;
-                    top: 175px;
+                    left: 270px;
+                    top: 176px;
                 }
             }
             &_second{
@@ -196,6 +199,7 @@
                     border-radius: 50px;
                     position: relative;
                     padding: 0px 0px 0px 30px;
+                    appearance: none;
                 }
                 &_svg{
                     width: 15px;
