@@ -43,44 +43,50 @@
         padding: 0 0 80px 0;
         &_first{
             display: block;
-            &_search{
-                margin: 0 15px 30px 0px;
-                width: 290px;
-                height: 47px;
-                color: white;
-                background-color: rgba(128, 128, 128, 0.7);
-                border: none;
-                border-radius: 50px;
+            &_label{
                 position: relative;
-                padding: 0px 0px 0px 0px;
-            }
-            &_svg{
-                width: 15px;
-                height: 15px;
-                position: absolute;
-                left: 670px;
-                top: 235px;
+                &_search{
+                    margin: 0 15px 30px 0px;
+                    width: 290px;
+                    height: 47px;
+                    color: white;
+                    background-color: rgba(128, 128, 128, 0.7);
+                    border: none;
+                    border-radius: 50px;
+                    padding: 0px 0px 0px 0px;
+                }
+                &_svg{
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    left: 259px;
+                    top: 2px;
+                }
             }
         }
         &_second{
-            &_search{
-                margin: 0 0 30px 15px;
-                width: 290px;
-                height: 47px;
-                color: white;
-                background-color: rgba(128, 128, 128, 0.7);                
-                border: none;
-                border-radius: 50px;
+            display: block;
+            &_label{
                 position: relative;
-                padding: 0px 0px 0px 30px;
-                appearance: none;
-            }
-            &_svg{
-                width: 15px;
-                height: 10px;
-                position: absolute;
-                left: 998px;
-                top: 237px;
+                &_search{
+                    margin: 0 0 30px 15px;
+                    width: 290px;
+                    height: 47px;
+                    color: white;
+                    background-color: rgba(128, 128, 128, 0.7);                
+                    border: none;
+                    border-radius: 50px;
+                    position: relative;
+                    padding: 0px 0px 0px 30px;
+                    appearance: none;
+                }
+                &_svg{
+                    width: 15px;
+                    height: 10px;
+                    position: absolute;
+                    left: 278px;
+                    top: 4px;
+                }
             }
         }
     }
