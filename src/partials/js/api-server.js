@@ -27,8 +27,14 @@ export function searchByCountry(country) {
 }
 
 export function searchByKeyword(keyword) {
-    console.log(keyword);
-    return fetch(`https://${BASE_URL}/discovery/v2/events?locale=${keyword}&apikey=${API_KEY}`)
-    .then(r=>r.json())
+  const url = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${keyword}&apikey=${API_KEY}`;
+  console.log('Fetching from URL:', url);
+  return fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => data._embedded?.events || []);
 }
-
