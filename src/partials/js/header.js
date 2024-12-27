@@ -23,7 +23,8 @@ searchInput.addEventListener('input', debounce(async (event) => {
   const keyword = event.target.value.trim();
   if (keyword.length > 2) {
     try {
-      const events = await searchByKeyword(keyword);
+      const events = await searchByKeyword(keyword); 
+      console.log('Events found for keyword:', keyword, events);
       createMarkup(events);
     } catch (error) {
     }
