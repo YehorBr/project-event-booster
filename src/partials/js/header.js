@@ -16,3 +16,24 @@ select.addEventListener('change', (event) =>{
         
     })
 })
+
+const searchInput = document.getElementById('keyword_search');
+
+searchInput.addEventListener('input', debounce(async (event) => {
+  const keyword = event.target.value.trim();
+  if (keyword.length > 2) {
+    try {
+      const events = await searchByKeyword(keyword);
+      createMarkup(events);
+    } catch (error) {
+    }
+  }
+}, 300));
+
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+  }
