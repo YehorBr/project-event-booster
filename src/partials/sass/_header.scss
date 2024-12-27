@@ -25,7 +25,7 @@
             color: black;
             width: 50%;
             text-align: center;
-            font-family: Montserrat;
+            font-family: $mainFonts;
             font-size: 50px;
             font-weight: 900;
             line-height: 60.95px;
@@ -106,8 +106,7 @@
                 color: black;
                 width: 50%;
                 text-align: center;
-                font-family: Montserrat;
-                font-size: 50px;
+                font-family: $mainFonts;                font-size: 50px;
                 font-weight: 900;
                 line-height: 60.95px;
                 color: #DC56C5;
@@ -175,8 +174,7 @@
                 color: black;
                 width: 50%;
                 text-align: center;
-                font-family: Montserrat;
-                font-size: 30px;
+                font-family: $mainFonts;                font-size: 30px;
                 font-weight: 900;
                 line-height: 36.57px;
                 color: #DC56C5;
@@ -233,8 +231,7 @@
                 margin: 0 0 0 0;
                 width: 80%;
                 text-align: center;
-                font-family: Montserrat;
-                font-size: 18px;
+                font-family: $mainFonts;                font-size: 18px;
                 font-weight: 900;
                 line-height: 21.94px;
                 color: #DC56C5;
