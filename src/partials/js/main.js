@@ -9,16 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function fetchAndRenderEvents() {
-  try {
-    const events = await ticketmasterApi.fetchEvents();
-    if (events.length === 0) {
-      return;
-    }
+  const loader = document.createElement('div');
+  loader.className = 'loader';
+  articlesContainerRef.appendChild(loader);
 
-    const firstThreeEvents = events.slice(0, 20);
-    createMarkup(firstThreeEvents);
+  try {
+    loader.style.display = 'block';
+    const events = await ticketmasterApi.fetchEvents();
+    if (events.length === 0) return;
+    const firstTwentyEvents = events.slice(0, 20);
+    createMarkup(firstTwentyEvents);
   } catch (error) {
     console.error('Error', error);
+  } finally {
+    loader.remove();
   }
 }
 
@@ -38,5 +42,9 @@ export function createMarkup(events) {
     )
     .join('');
 
+  articlesContainerRef.insertAdjacentHTML('beforeend', markup);
+}
+
   articlesContainerRef.innerHTML = markup;
 }
+
