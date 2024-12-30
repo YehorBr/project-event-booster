@@ -27,6 +27,8 @@ async function fetchAndRenderEvents() {
 }
 
 export function createMarkup(events) {
+  
+  console.log('виклик');
   const markup = events
     .map(
       event => `
@@ -39,5 +41,10 @@ export function createMarkup(events) {
     `
     )
     .join('');
+
   articlesContainerRef.insertAdjacentHTML('beforeend', markup);
 }
+
+  articlesContainerRef.innerHTML = markup;
+}
+

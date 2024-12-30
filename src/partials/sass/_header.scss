@@ -1,0 +1,299 @@
+.header_input_first_search::placeholder{
+    color: #939393;
+}
+.header_input_second_search::placeholder{
+    color: #939393;
+}
+.header{
+    background-image: url(./images/header/first-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 0 0 0;
+    border: none;
+    margin: 0 0 0 0;
+    &_top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_logo{
+            width: 18%;
+            height: auto;
+        }
+        &_title{
+            margin: 40px 0 0 0;
+            color: black;
+            width: 50%;
+            text-align: center;
+            font-family: $mainFonts;
+            font-size: 50px;
+            font-weight: 900;
+            line-height: 60.95px;
+            color: #DC56C5;
+        }
+        &_emptiness{
+            color: black;
+            width: 20%;
+            height: auto;
+        }
+    }
+    &_input{
+        display: flex;
+        justify-content: center;
+        padding: 0 0 80px 0;
+        &_first{
+            display: block;
+            &_label{
+                position: relative;
+                &_search{
+                    margin: 0 15px 30px 0px;
+                    width: 290px;
+                    height: 47px;
+                    color: white;
+                    background-color: rgba(128, 128, 128, 0.7);
+                    border: none;
+                    border-radius: 50px;
+                    padding: 0px 0px 0px 0px;
+                }
+                &_svg{
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    left: 259px;
+                    top: 2px;
+                }
+            }
+        }
+        &_second{
+            display: block;
+            &_label{
+                position: relative;
+                &_search{
+                    margin: 0 0 30px 15px;
+                    width: 290px;
+                    height: 47px;
+                    color: white;
+                    background-color: rgba(128, 128, 128, 0.7);                
+                    border: none;
+                    border-radius: 50px;
+                    position: relative;
+                    padding: 0px 0px 0px 30px;
+                    appearance: none;
+                }
+                &_svg{
+                    width: 15px;
+                    height: 10px;
+                    position: absolute;
+                    left: 278px;
+                    top: 4px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $tablet) and (max-width:1199px) {
+    .header{
+        background-image: url(./images/header/first-background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 0 0 0 0;
+        border: none;
+        margin: 0 0 0 0;
+        &_top{
+            display: flex;
+            justify-content: space-between;
+            &_logo{
+                width: 20%;
+                height: 5%;
+            }
+            &_title{
+                margin: 40px 0 0 0;
+                color: black;
+                width: 50%;
+                text-align: center;
+                font-family: $mainFonts;
+                font-size: 50px;
+                font-weight: 900;
+                line-height: 60.95px;
+                color: #DC56C5;
+            }
+            &_emptiness{
+                color: black;
+                width: 20%;
+                height: auto;
+            }
+        }
+        &_input{
+            display: flex;
+            justify-content: center;
+            &_first{
+                display: block;
+                &_search{
+                    margin: 0 15px 30px 0px;
+                    width: 240px;
+                    height: 40px;
+                    color: white;
+                    background-color: rgba(128, 128, 128, 0.7);
+                    border: none;
+                    border-radius: 50px;
+                    position: relative;
+                    padding: 0px 0px 0px 0px;
+                    }
+                &_svg{
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    left: 550px;
+                    top: 213px;
+                }
+            }
+            &_second{
+                &_search{
+                    margin: 0 0 30px 15px;
+                    width: 240px;
+                    height: 40px;
+                    color: white;
+                    background-color: rgba(128, 128, 128, 0.7);                
+                    border: none;
+                    border-radius: 50px;
+                    position: relative;
+                    padding: 0px 0px 0px 30px;
+                    appearance: none;
+                }
+                &_svg{
+                    width: 15px;
+                    height: 10px;
+                    position: absolute;
+                    left: 827px;
+                    top: 217px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $mobile) and (max-width:767px) {
+    .header{
+        &_top{
+            &_title{
+                margin: 40px 0 0 0;
+                color: black;
+                width: 50%;
+                text-align: center;
+                font-family: $mainFonts;
+                font-size: 30px;
+                font-weight: 900;
+                line-height: 36.57px;
+                color: #DC56C5;
+            }
+            &_emptiness{
+                color: black;
+                width: 20%;
+                height: auto;
+            }
+        }
+        &_input{
+            &_first{
+                &_svg{
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;
+                    left: 353px;
+                    top: 145px;
+                }
+            }
+            &_second{
+                &_svg{
+                    display: none;
+                    width: 15px;
+                    height: 10px;
+                    position: absolute;
+                    left: 615px;
+                    top: 145px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:320px){
+    .header{
+        background-image: url(./images/header/first-background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 0 0 0 0;
+        border: none;
+        margin: 0 0 0 0;
+        &_top{
+            display: block;
+            justify-content: space-between;
+            &_logo{
+                width: 35%;
+                height: 5%;
+            }
+            &_title{
+                margin: 0 0 0 0;
+                width: 80%;
+                text-align: center;
+                font-family: $mainFonts;                font-size: 18px;
+                font-weight: 900;
+                line-height: 21.94px;
+                color: #DC56C5;
+                align-items: center;
+                margin: 0 0 0 32px;
+            }
+            &_emptiness{
+                color: black;
+                width: 20%;
+                height: auto;
+                display: none;
+            }
+        }
+        &_input{
+            display: block;
+            align-content: center;
+            &_first{
+                &_search{
+                    margin: 25px 0 25px 20px;
+                    width: 240px;
+                    height: 40px;
+                    background-color: rgba(128, 128, 128, 0.7);
+                    border: none;
+                    border-radius: 50px;
+                    position: relative;
+                    padding: 0px 0px 0px 30px;
+                }
+                &_svg{
+                    width: 13px;
+                    height: 13px;
+                    position: absolute;
+                    left: 270px;
+                    top: 176px;
+                }
+            }
+            &_second{
+                &_search{
+                    margin: 0 0 52px 20px;
+                    width: 240px;
+                    height: 40px;
+                    color: white;
+                    background-color: rgba(128, 128, 128, 0.7);                
+                    border: none;
+                    border-radius: 50px;
+                    position: relative;
+                    padding: 0px 0px 0px 30px;
+                    appearance: none;
+                }
+                &_svg{
+                    width: 15px;
+                    height: 10px;
+                    position: absolute;
+                    left: 260px;
+                    top: 243px;
+                }
+            }
+        }
+    }
+}
