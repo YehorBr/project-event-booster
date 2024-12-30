@@ -46,5 +46,4 @@ export function createMarkup(events) {
 }
 
   articlesContainerRef.innerHTML = markup;
-}
 
