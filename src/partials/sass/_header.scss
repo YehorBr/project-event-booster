@@ -1,3 +1,4 @@
+Денис, [30.12.2024 16:07]
 .header_input_first_search::placeholder{
     color: #939393;
 }
@@ -139,7 +140,9 @@
                     border-radius: 50px;
                     position: relative;
                     padding: 0px 0px 0px 0px;
-                }
+
+Денис, [30.12.2024 16:07]
+}
                 &_svg{
                     width: 15px;
                     height: 15px;
@@ -181,7 +184,8 @@
                 color: black;
                 width: 50%;
                 text-align: center;
-                font-family: $mainFonts;                font-size: 30px;
+                font-family: $mainFonts;
+                font-size: 30px;
                 font-weight: 900;
                 line-height: 36.57px;
                 color: #DC56C5;
@@ -216,8 +220,7 @@
     }
 }
 
-
-
+Денис, [30.12.2024 16:07]
 @media (max-width:320px){
     .header{
         background-image: url(./images/header/first-background.png);
