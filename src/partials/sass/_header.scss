@@ -1,3 +1,4 @@
+Денис, [30.12.2024 16:07]
 .header_input_first_search::placeholder{
     color: #939393;
 }
@@ -43,46 +44,50 @@
         padding: 0 0 80px 0;
         &_first{
             display: block;
-            &_search{
-                margin: 0 15px 30px 0px;
-                width: 290px;
-                height: 47px;
-                color: white;
-                background-color: rgba(128, 128, 128, 0.7);
-                border: none;
-                border-radius: 50px;
+            &_label{
                 position: relative;
-                padding: 0px 0px 0px 0px;
-            }
-            &_svg{
-                display: none;
-                width: 15px;
-                height: 15px;
-                position: absolute;
-                left: 670px;
-                top: 235px;
+                &_search{
+                    margin: 0 15px 30px 0px;
+                    width: 290px;
+                    height: 47px;
+                    color: white;
+                    background-color: rgba(128, 128, 128, 0.7);
+                    border: none;
+                    border-radius: 50px;
+                    padding: 0px 0px 0px 0px;
+                }
+                &_svg{
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    left: 259px;
+                    top: 2px;
+                }
             }
         }
         &_second{
-            &_search{
-                margin: 0 0 30px 15px;
-                width: 290px;
-                height: 47px;
-                color: white;
-                background-color: rgba(128, 128, 128, 0.7);                
-                border: none;
-                border-radius: 50px;
+            display: block;
+            &_label{
                 position: relative;
-                padding: 0px 0px 0px 30px;
-                appearance: none;
-            }
-            &_svg{
-                display: none;
-                width: 15px;
-                height: 10px;
-                position: absolute;
-                left: 998px;
-                top: 237px;
+                &_search{
+                    margin: 0 0 30px 15px;
+                    width: 290px;
+                    height: 47px;
+                    color: white;
+                    background-color: rgba(128, 128, 128, 0.7);                
+                    border: none;
+                    border-radius: 50px;
+                    position: relative;
+                    padding: 0px 0px 0px 30px;
+                    appearance: none;
+                }
+                &_svg{
+                    width: 15px;
+                    height: 10px;
+                    position: absolute;
+                    left: 278px;
+                    top: 4px;
+                }
             }
         }
     }
@@ -135,9 +140,10 @@
                     border-radius: 50px;
                     position: relative;
                     padding: 0px 0px 0px 0px;
-                }
+
+Денис, [30.12.2024 16:07]
+}
                 &_svg{
-                    display: none;
                     width: 15px;
                     height: 15px;
                     position: absolute;
@@ -159,7 +165,6 @@
                     appearance: none;
                 }
                 &_svg{
-                    display: none;
                     width: 15px;
                     height: 10px;
                     position: absolute;
@@ -179,7 +184,8 @@
                 color: black;
                 width: 50%;
                 text-align: center;
-                font-family: $mainFonts;                font-size: 30px;
+                font-family: $mainFonts;
+                font-size: 30px;
                 font-weight: 900;
                 line-height: 36.57px;
                 color: #DC56C5;
@@ -193,7 +199,6 @@
         &_input{
             &_first{
                 &_svg{
-                    display: none;
                     width: 10px;
                     height: 10px;
                     position: absolute;
@@ -215,8 +220,7 @@
     }
 }
 
-
-
+Денис, [30.12.2024 16:07]
 @media (max-width:320px){
     .header{
         background-image: url(./images/header/first-background.png);
@@ -265,6 +269,13 @@
                     position: relative;
                     padding: 0px 0px 0px 30px;
                 }
+                &_svg{
+                    width: 13px;
+                    height: 13px;
+                    position: absolute;
+                    left: 270px;
+                    top: 176px;
+                }
             }
             &_second{
                 &_search{
@@ -278,6 +289,13 @@
                     position: relative;
                     padding: 0px 0px 0px 30px;
                     appearance: none;
+                }
+                &_svg{
+                    width: 15px;
+                    height: 10px;
+                    position: absolute;
+                    left: 260px;
+                    top: 243px;
                 }
             }
         }

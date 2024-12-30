@@ -7,21 +7,27 @@
         </div>
         <div class="header_input">
             <div class="header_input_first">
-                <div class="input_container">
-                <input class="header_input_first_search" type="text" placeholder="Start searching" id="keyword_search">
-                </div>
+                <label class="header_input_first_label" for="">
+                    <input class="header_input_first_label_search" type="text" placeholder="Start searching" id="keyword_search">
+                    <svg class="header_input_first_label_svg">
+                        <use xlink:href="#search-icon"></use>
+                    </svg>
+                </label>
             </div>
             <div class="header_input_second">
-                <div class="input_container">
-                <select class="header_input_second_search" name="select" id="country_select">
-                    <option value="a">Choose country</option>
-                    <option value="CA">Canada</option>
-                    <option value="US">United States Of America</option>
-                    <option value="FR">France</option>
-                    <option value="CZ">Czech Republic</option>
-                    <option value="DE">Germany</option>
-                </select>
-                </div>
+                <label class="header_input_second_label" for="">
+                    <select class="header_input_second_label_search" name="select" id="country_select">
+                        <option value="a">Choose country</option>
+                        <option value="CA">Canada</option>
+                        <option value="IT">Italy</option>
+                        <option value="FR">France</option>
+                        <option value="PL">Poland</option>
+                        <option value="DE">Germany</option>
+                    </select>
+                    <svg class="header_input_second_label_svg">
+                        <use xlink:href="#Polygon"></use>
+                    </svg>
+                </label>
             </div>
         </div>
     </header>
