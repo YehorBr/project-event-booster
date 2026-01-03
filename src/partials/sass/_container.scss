@@ -3,6 +3,7 @@
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
   
     @media screen and (min-width: $mobile) {
       width: $mobile;

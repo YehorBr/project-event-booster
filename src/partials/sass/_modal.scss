@@ -29,7 +29,7 @@
 
     @media screen and (min-width: $tablet) and (max-width: 1199px){
         min-width: 595px;
-        min-height: 790px;
+        min-height: 690px;
 
         border-radius: 250px 0px;
         
@@ -37,7 +37,7 @@
 
     @media screen and (min-width: $mobile) and (max-width: 767px){
         min-width: 272px;
-        min-height: 815px;
+        min-height: 745px;
         
         border-radius: 150px 0px;
     }
@@ -78,7 +78,7 @@
    height: 641px;
 
    @media screen and(min-width: $tablet) and (max-width: 1199px){
-    width: 233px;
+    width: 200px;
     height: 416px;
    }
 
